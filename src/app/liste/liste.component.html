@@ -1,0 +1,14 @@
+<div *ngIf="characterList; else loading" class="container">
+	<div class="row">
+		<div *ngFor="let character of characterList" class="card col-lg-3 col-md-4 col-sm-6 col-12" style="width: 18rem;">
+			<img class="card-img-top" src="{{ character.pictureUrl }}" alt="Card image cap">
+			<div class="card-body">
+				<h5 class="card-title">{{ character.name }}</h5>
+			</div>
+		</div>
+	</div>
+
+</div>
+<ng-template #loading>
+	Loading...
+</ng-template>
